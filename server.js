@@ -30,3 +30,4 @@ cron.schedule("0 * * * *", async () => { // Run the task at the start of every h
   }
 })();
 
+module.exports = app;
