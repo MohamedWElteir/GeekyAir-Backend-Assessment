@@ -7,6 +7,7 @@ const ratelimit = require("express-rate-limit");
 const swaggerUI = require("swagger-ui-express");
 const swaggerSpec = require("./swaggerConfig");
 
+
 const app = express();
 
 const auth_limit = ratelimit({
@@ -25,6 +26,10 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 app.use("/auth", auth_limit, authRoutes);
 app.use("/menu", menuRoutes);
 app.use("/orders", order_limit, orderRoutes);
+
+app.get("/test", (req, res) => {
+  res.status(200).json({ message: "working" });
+});
 
 
 app.use((err, req, res, next) => { // Global error handling middleware. That has been introduced as in the new Express 5
