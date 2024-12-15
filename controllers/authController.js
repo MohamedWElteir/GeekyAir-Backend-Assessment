@@ -1,5 +1,5 @@
 const userModel = require("../models/user");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const twilio = require('twilio')
 const jwt = require("jsonwebtoken");
 
