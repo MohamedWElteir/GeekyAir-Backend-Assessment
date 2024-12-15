@@ -66,7 +66,7 @@ exports.completeOrder = async (req, res) => {
 // (Admin only)
 exports.getOrders = async (req, res) => {
   try {
-    // Fetch all orders
+    
     const orders = await orderModel.getAllOrders();
 
    
@@ -95,18 +95,18 @@ exports.getOrders = async (req, res) => {
 };
 
 
-// Get a specific order by ID (Admin only)
+
 exports.getOrderById = async (req, res) => {
   const { id } = req.params;
 
   try {
-    // Fetch the order
+    
     const order = await orderModel.getOrderById(id);
     if (!order) {
       return res.status(404).json({ message: "Order not found" });
     }
 
-    // Fetch the associated items
+   
     const items = await orderItemModel.getItemsByOrderId(id);
     const detailedItems = await Promise.all(
       items.map(async (item) => {
