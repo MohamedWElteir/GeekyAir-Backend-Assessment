@@ -9,6 +9,7 @@ const updateExpiredOrders = async () => {
         `);
 
       console.log(`${result.affectedRows} orders expired.`);
+    return result.affectedRows
       
   } catch (err) {
     console.error("Error updating expired orders:", err.message);

@@ -66,6 +66,8 @@ router.post("/login", login);
  *                 type: string
  *               password:
  *                 type: string
+ *               role:
+ *                 type: string
  *               phoneNumber:
  *                 type: string
  *     responses:

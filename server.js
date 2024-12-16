@@ -5,11 +5,14 @@ const cron = require("node-cron");
 const updateExpiredOrders = require("./jobs/updateExpiredOrders");
 
 const PORT = process.env.PORT || 3000;
-cron.schedule("0 * * * *", async () => { // Run the task at the start of every hour.
+cron.schedule("8 * * * *", async () => { // Run the task at the start of every hour.
   console.log("Running cron job to update expired orders...");
    try {
-    await updateExpiredOrders();
-    console.log("Expired orders updated successfully.");
+     const items = await updateExpiredOrders();
+     items > 0
+       ? console.log("Expired orders updated successfully.")
+       : console.log("No orders to update.");
+    
   } catch (err) {
     console.error("Error updating expired orders:", err.message);
   }

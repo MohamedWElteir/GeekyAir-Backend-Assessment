@@ -1,10 +1,10 @@
 const pool = require("./index")
 
 module.exports = {
-  async createUser(username, passwordHash, phoneNumber, role) {
+  async createUser(username, passwordHash, role, phoneNumber) {
     const [result] = await pool.execute(
-      "INSERT INTO Users (id, username, passwordHash, phoneNumber, role) VALUES (UUID(), ?, ?, ?, ?)",
-      [username, passwordHash, phoneNumber, role]
+      "INSERT INTO Users (id, username, passwordHash, role, phoneNumber) VALUES (UUID(), ?, ?, ?, ?)",
+      [username, passwordHash, role, phoneNumber]
     );
     return result;
   },
