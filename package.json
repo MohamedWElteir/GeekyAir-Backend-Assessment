@@ -30,6 +30,7 @@
     "sequelize": "^6.37.5",
     "srms": "file:",
     "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-dist": "^5.18.2",
     "swagger-ui-express": "^5.0.1",
     "tedious": "^18.6.1",
     "twilio": "^5.4.0"
