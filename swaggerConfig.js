@@ -1,6 +1,7 @@
 const swaggerJSDoc = require("swagger-jsdoc");
 require("dotenv").config();
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000;  
+
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {
@@ -10,8 +11,10 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: `http://localhost:${PORT}`,
-      description: "Development server",
+      url: process.env.NODE_ENV === 'production' 
+        ? `https://geeky-air-lyart.vercel.app/`
+        : `http://localhost:${PORT}`,
+      description: process.env.NODE_ENV === 'production' ? 'Production server' : 'Development server',
     },
   ],
   components: {
