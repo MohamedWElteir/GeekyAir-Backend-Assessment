@@ -23,7 +23,7 @@ const order_limit = ratelimit({
 
 app.use(bodyParser.json()); // Middleware
 
-app.use("/api-docs", express.static(swaggerUiDist.absolutePath()));
+
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 app.use("/auth", auth_limit, authRoutes);
 app.use("/menu", menuRoutes);
