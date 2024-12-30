@@ -1,4 +1,4 @@
-# Project Title: SRMS (Serverless Restaurant Management System)
+# SRMS (Serverless Restaurant Management System)
 
 This project is a Serverless **Restaurant Management System** backend API built with **Node.js** and **Express**. It manages user authentication, orders, and password resets while leveraging modern tools like **Twilio** for SMS notifications and **MySQL** for persistent storage. The system is deployed using **Vercel** for serverless architecture.
 - ## Tip: You can access the API's Swagger documentation using the endpoint /api-docs
