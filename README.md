@@ -225,10 +225,3 @@ To deploy your project to Vercel:
 
 ---
 
-## Future Improvements
-- Implement two-factor authentication (2FA).
-- Add more role-based access controls.
-- Enhance error handling and validation.
-
----
-
