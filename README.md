@@ -36,7 +36,7 @@ This project is a Serverless **Restaurant Management System** backend API built 
   - Serverless function for API endpoints.
   - Configured `vercel.json` for custom routing and serverless support.
   -  Deployed on Vercel: [SRMS on Vercel](https://geeky-air-lyart.vercel.app/test)
-  - Database is hosted on [Filess.io](filess.io)
+  - Database is hosted on [Filess.io](https://filess.io/)
 
 ---
 
