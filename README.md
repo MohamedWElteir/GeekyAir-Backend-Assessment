@@ -93,7 +93,8 @@ CLIENT_URL=https://your-client-url
 ```
 
 ### 5. Database Setup
-Run the following SQL script to set up the database tables:
+Run the SQL file to set up the database tables.
+Here's a sample from the file:
 ```sql
 CREATE TABLE users (
   id CHAR(36) PRIMARY KEY,
