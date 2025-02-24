@@ -21,7 +21,7 @@ const order_limit = ratelimit({
   limit: 200
 })
 
-app.use(bodyParser.json()); // Middleware
+app.use(bodyParser.json());
 
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
@@ -34,7 +34,7 @@ app.get("/test", (req, res) => {
 });
 
 
-app.use((err, req, res, next) => { // Global error handling middleware. That has been introduced as in the new Express 5
+app.use((err, req, res, next) => {
   console.error(err.stack);
   res
     .status(500)
