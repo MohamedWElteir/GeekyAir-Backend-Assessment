@@ -26,11 +26,6 @@ This project is a Serverless **Restaurant Management System** backend API built 
   - Create and manage orders.
   - Delete users and cascade-delete their orders and related entries.
 
-### Database Schema Changes
-- Added **`phoneNumber`** column to the `users` table.
-- Removed **`email`** column.
-- Updated foreign key constraints to enable cascading deletes.
-
 ### Serverless Deployment
 - **Vercel Deployment**
   - Serverless function for API endpoints.
